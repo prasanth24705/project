@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Dassault Systemes\B20\intel_a\code\bin\CATSTART.exe"  -run "CNEXT.exe" -env CATIA_PLM_Express.V5R20.B20 -direnv "C:\ProgramData\DassaultSystemes\CATEnv" -nowindow 

@@ -1,0 +1,29 @@
+def left_binary_search(arr,low,high,search):
+    p=-1
+    if(low<=high):
+        mid=(low+high)//2
+        if(arr[mid]==search):
+            return mid         
+        elif(arr[mid]>search):
+            high=mid-1
+            return left_binary_search(arr,low,high,search)
+        else:
+            low=mid+1
+            return left_binary_search(arr,low,high,search)
+    return p
+def find_left(arr,mid):
+    for i in range(mid-1,0,-1):
+        if arr[mid]==arr[i]:
+            p=i
+        else:
+            return i+1
+    
+n=int(input("Enter number of elements available in a list:"))
+arr=list(map(int,input().split(" ")))  #Give the input as numbers seperated by space
+search=int(input("Enter the element to be searched:"))
+p=left_binary_search(sorted(arr),0,n-1,search)
+if p==-1:
+    print("Element not found")
+else:
+    print(find_left(arr,p))
+
